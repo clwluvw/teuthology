@@ -46,7 +46,7 @@ def host_shortname(hostname):
     else:
         return hostname.split('.', 1)[0]
 
-def canonicalize_hostname(hostname, user='ubuntu'):
+def canonicalize_hostname(hostname, user='modir'):
     hostname_expr = hostname_expr_templ.format(
         lab_domain=config.lab_domain.replace('.', '\.'))
     match = re.match(hostname_expr, hostname)
